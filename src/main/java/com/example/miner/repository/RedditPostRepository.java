@@ -11,8 +11,8 @@ import java.util.Optional;
 @Repository
 public interface RedditPostRepository extends JpaRepository<RedditPost, Long> {
 
-    Optional<RedditPost> findByRedditId(String redditId);
+   Optional<RedditPost> findByRedditId(String redditId);
 
-    List<RedditPost> findTop20ByDateAfterOrderByScoreDesc(LocalDateTime date);
+   List<RedditPost> findByDate(LocalDateTime date);
 
 }
