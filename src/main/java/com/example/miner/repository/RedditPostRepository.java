@@ -1,0 +1,14 @@
+package com.example.miner.repository;
+
+import com.example.miner.model.RedditPost;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface RedditPostRepository extends JpaRepository<RedditPost, Long> {
+
+    Optional<RedditPost> findByRedditId(String redditId);
+
+}
