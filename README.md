@@ -11,16 +11,7 @@ This is a Spring Boot API that scrapes /r/memes top posts for the last 24h, stor
 
 #### GET/top-memes
 
-Description: This endpoint returns the top posts from a subreddit and stores them in MySQL database. Currently it captures /r/memes by default but you can change the url and it will capture any subreddit. 
-
-Response: A JSONObject containing the basic information on the top 20 posts
-
-#### GET/top-20-report-today
-
-Description: This endpoint generates a CSV report containing the top 20 Reddit posts from the past 24 hours sorted by score.
-
-Response: A CSV file download with the following columns: Reddit ID, Title, Score, Date, URL, Author, Image.
-
+This endpoint returns the top posts from a subreddit and stores them in MySQL database. Currently it captures /r/memes by default but you can change the url and it will capture any subreddit. 
 
 ```
     {
@@ -33,6 +24,11 @@ Response: A CSV file download with the following columns: Reddit ID, Title, Scor
         "date": "2024-06-20T20:19:13.0291371"
     },
 ```
+
+#### GET/top-20-report-today
+
+This endpoint generates a CSV file download with the following columns: Reddit ID, Title, Score, Date, URL, Author and Image from the top 20 posts in the last 24 hours.
+
 
 ### Database Schema
 
