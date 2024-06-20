@@ -90,7 +90,7 @@ public class RedditMinerService {
 
    public ByteArrayResource generateTop20Report() throws IOException {
       LocalDateTime yesterday = LocalDateTime.now().minusDays(1);
-      List<RedditPost> topPosts = redditPostRepository.findTop20ByDateAfterOrderByScoreDesc(yesterday);
+      List<RedditPost> topPosts = redditPostRepository.findByDate(yesterday);
 
       ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
       PrintWriter writer = getPrintWriter(outputStream, topPosts);
