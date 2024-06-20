@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class RedditMinerApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(RedditMinerApplication.class, args);
-    }
+   public static void main(String[] args) {
+      SpringApplication.run(RedditMinerApplication.class, args);
+   }
 }

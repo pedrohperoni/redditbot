@@ -2,67 +2,79 @@ package com.example.miner.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
 
 @Entity
 public class RedditPost {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    private Long id;
-    @Column(unique = true) // Ensure uniqueness at the database level
-    private String redditId;
-    private String title;
-    private String url;
-    private String image;
-    private int score;
-    private String author;
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+   @Id
+   private Long id;
+   @Column(unique = true)
+   private String redditId;
+   private String title;
+   private String url;
+   private String image;
+   private int score;
+   private String author;
 
-    public String getRedditId() {
-        return redditId;
-    }
+   @Column()
+   private LocalDateTime date;
 
-    public void setRedditId(String redditId) {
-        this.redditId = redditId;
-    }
+   public String getRedditId() {
+      return redditId;
+   }
 
-    public String getTitle() {
-        return title;
-    }
+   public void setRedditId(String redditId) {
+      this.redditId = redditId;
+   }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+   public String getTitle() {
+      return title;
+   }
 
-    public String getUrl() {
-        return url;
-    }
+   public void setTitle(String title) {
+      this.title = title;
+   }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+   public String getUrl() {
+      return url;
+   }
 
-    public String getImage() {
-        return image;
-    }
+   public void setUrl(String url) {
+      this.url = url;
+   }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
+   public String getImage() {
+      return image;
+   }
 
-    public int getScore() {
-        return score;
-    }
+   public void setImage(String image) {
+      this.image = image;
+   }
 
-    public void setScore(int score) {
-        this.score = score;
-    }
+   public int getScore() {
+      return score;
+   }
 
-    public String getAuthor() {
-        return author;
-    }
+   public void setScore(int score) {
+      this.score = score;
+   }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+   public String getAuthor() {
+      return author;
+   }
+
+   public void setAuthor(String author) {
+      this.author = author;
+   }
+
+   public LocalDateTime getDate() {
+      return date;
+   }
+
+   public void setDate(LocalDateTime date) {
+      this.date = date;
+   }
 
 }
