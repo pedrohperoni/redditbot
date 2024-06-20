@@ -30,7 +30,7 @@ This endpoint returns the top posts from a subreddit and stores them in MySQL da
 This endpoint generates a CSV file download with the following columns: Reddit ID, Title, Score, Date, URL, Author and Image from the top 20 posts in the last 24 hours.
 
 
-### Database Schema
+## Database Schema
 
 ```
 CREATE TABLE reddit_post (
